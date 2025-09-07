@@ -76,3 +76,10 @@ footer{
     background-color: gray;
     color: white;
 }
+.active{
+    background-color: aqua;
+    border: red 2px solid;
+}
+.hiden{
+    visibility: hidden;
+}
