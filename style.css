@@ -47,6 +47,8 @@ main{
     background-color: aquamarine;
 }
 .frame{
+    position: relative;
+    z-index: 1;
     width: 200px;
     height: 200px;
     border-radius: 200px;
@@ -57,8 +59,14 @@ main{
     max-height: 181px;
 }
 .frame img{
+    position: absolute;
+    z-index: 2;
     max-width:  150px;
     max-height: 151px;
+}
+.hidden{
+    z-index: -1;
+    visibility: hidden;
 }
 section{
     width: 70%;
@@ -79,7 +87,4 @@ footer{
 .active{
     background-color: aqua;
     border: red 2px solid;
-}
-.hiden{
-    visibility: hidden;
 }
