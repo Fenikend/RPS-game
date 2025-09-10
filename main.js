@@ -1,9 +1,10 @@
-let persButtn=document.querySelectorAll('button')
+let persButtn=document.querySelectorAll('button.figure')
 let persImage=document.querySelector('#user')
 let botImage=document.querySelector('#bot')
 let emptyFigure=document.querySelector('#plhFrame')
-let timerElement=document.querySelector('#timer')
-let time=99
+// let timerElement=document.querySelector('#timer')
+// let time=99
+let gameScore=[0,0]
 
 function setButtonStatus(){
     persButtn.forEach((btn)=>{
@@ -60,7 +61,13 @@ function getBotMove(){
     return(moves[Math.ceil(Math.random()*3)-1])
     
 }
-function addScore(){
+function changeScore(score,res){
+    if (res==='pRound'){
+        score[0]+=1
+    }
+    if(res === 'bRound'){
+        socre[0]+=1
+    }
 
 }
 function resetRound(cnd){
@@ -68,53 +75,32 @@ function resetRound(cnd){
         if (btn.classList.contains('active')){
             btn.classList.remove('active');
         }
-        setFigure('')
+        setFigure()
     })
 }
-
-function checkTimer(){
-    let cond=getButtonStatus()
-    timerElement.textContent='00:0'+Math.floor(time/10);
-    if (cond){
-         stopTimer()
-        time=0
-    }
-    if(time===0){
-        time=0
-        stopTimer()
-    }
-}
-function stopTimer(){
-    clearInterval(myInterval)
-}
+//add timer to the game
+// function checkTimer(){
+//     let cond=getButtonStatus()
+//     timerElement.textContent='00:0'+Math.floor(time/10);
+//     if (cond){
+//          stopTimer()
+//         time=0
+//     }
+//     if(time===0){
+//         time=0
+//         stopTimer()
+//     }
+// }
+// function stopTimer(){
+//     clearInterval(myInterval)
+// }
 function done(res){
     return res
 }
-function main(){
-   setButtonStatus()
-   time=99
-   myInterval = setInterval(() => {
-        checkTimer(time)
-        time--
-
-        if (time === 0 || getButtonStatus()) {
-            let playerMove = getButtonStatus()
-            let botMove = getBotMove()
-            let res = getWinner(playerMove, botMove)
-            setFigure(res)   // you had 'res' as string
-            console.log(res)
-            clearInterval(myInterval)
-          
-        }
-    }, 100)
+function playRound(){
     
-    
-}
+    }
 function game(){
-    
-    let round=0;
-    let results=[0,0]
-    
-    
+   setButtonStatus()
 }
 game()
