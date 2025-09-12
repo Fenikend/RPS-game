@@ -134,11 +134,12 @@ function playRound(){
     if(gameScore.includes(5)){
         endScreen.classList.remove('hidden')
         endScreen.classList.add('on-top')
-        resetBtn.addEventListener('click',resetGame)
+        
    }
 
     }
 function game(){
+   resetBtn.addEventListener('click',resetGame)
    setButtonStatus()
    persButtn.forEach((btn)=>{
     btn.addEventListener('click',playRound)
