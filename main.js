@@ -49,23 +49,17 @@ function setFigure(res=''){
     if (res ==='pRound'){
         persImage.classList.remove('hidden')
         botImage.classList.add('hidden')
-<<<<<<< HEAD
-=======
         drawImage.classList.add('hidden')
->>>>>>> rps-web
     }
     else if(res==='bRound'){
         botImage.classList.remove('hidden')
         persImage.classList.add('hidden')
-<<<<<<< HEAD
-=======
         drawImage.classList.add('hidden')
     }
     else if(res==='draw'){
         drawImage.classList.remove('hidden')
         persImage.classList.add('hidden')
         botImage.classList.add('hidden')
->>>>>>> rps-web
     }
     else{
         botImage.classList.contains('hidden')?'':botImage.classList.add('hidden')
