@@ -82,16 +82,31 @@ main{
     background-color: white;
 }
 .figure img{
-    max-width:  181px;
-    max-height: 181px;
+    max-width:  140px;
+    max-height: 140px;
 }
 .frame img{
     position: absolute;
     z-index: 2;
-    max-width:  150px;
-    max-height: 151px;
+    max-width:  110px;
+    max-height: 110px;
 }
-.over-top{
+.score{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    color:black;
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.player-score{
+    background-color: aqua;
+
+}
+.bot-score{
+    background-color: red;
+}
+.on-top{
     z-index: 100;
 }
 .hidden{
@@ -99,7 +114,7 @@ main{
     visibility: hidden;
 }
 section{
-    width: 70%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -117,4 +132,8 @@ footer{
 .active{
     background-color: aqua;
     border: red 2px solid;
+}
+.active-bot{
+    background-color: red;
+    border: aqua 2px solid;
 }

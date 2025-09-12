@@ -7,11 +7,18 @@
     <title>RPS game</title>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="end-game-screen hidden">
+=======
+    <div class="end-game-screen hidden" id="end-screen">
+>>>>>>> rps-web
             <button id="reset">Reset game</button>
         </div>
     <main>
-        Choose your figure
+        <section class="Score">
+            <div class="player-score score" id="pScore" >0</div>
+            <div class="bot-score score" id="bScore">0</div>
+        </section>  
         <section class="Pbuttons">
             <button class="figure" id="plrbtn-scissors">
                 <img src="images/scissors.png" alt="scissors image">
@@ -24,20 +31,22 @@
             </button>
         </section>
         <section>
+           
             <div class="frame" id="plhFrame">
                 <img src="images/user.png" class="hidden" id="user" alt="Human figure">
-                <!-- <p class="timer" id="timer">00:10</p> -->
-                <img src="images/bot.png" class="hidden" id="bot" alt="Human figure">
+                <img src="images/bot.png" class="hidden" id="bot" alt="Bot figure">
+                <img src="images/draw.png" class="hidden" id="draw" alt="Draw figure">
             </div>
+            
         </section>
         <section class="Abuttons">
-            <div class="figure" id="abtn scissors">
+            <div class="figure" id="scissors">
                 <img src="images/scissors.png" alt="scissors image">
             </div>
-            <div class="figure" id="abtn rock">
+            <div class="figure" id="rock">
                 <img src="images/rock.png" alt="rock image">
             </div>
-            <div class="figure" id="abtn paper">
+            <div class="figure" id="paper">
                 <img src="images/paper.png" alt="paper image">
             </div>
         </section>
