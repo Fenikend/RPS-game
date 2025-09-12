@@ -26,12 +26,13 @@ function getButtonStatus(){
     }``
 
 function setFigure(res=''){
-    timerElement.classList.add('hidden')
     if (res ==='pRound'){
         persImage.classList.remove('hidden')
+        botImage.classList.add('hidden')
     }
     else if(res==='bRound'){
         botImage.classList.remove('hidden')
+        persImage.classList.add('hidden')
     }
     else{
         botImage.classList.contains('hidden')?'':botImage.classList.add('hidden')
@@ -66,9 +67,9 @@ function changeScore(score,res){
         score[0]+=1
     }
     if(res === 'bRound'){
-        socre[0]+=1
+        score[1]+=1
     }
-
+    console.log(score)
 }
 function resetRound(cnd){
     persButtn.forEach((btn)=>{
@@ -98,9 +99,19 @@ function done(res){
     return res
 }
 function playRound(){
+    const playerChoice=getButtonStatus()
+    const botChoice=getBotMove()
+    let res = getWinner(playerChoice,botChoice)
+    setFigure(res)
+    changeScore(gameScore,res)
+    console.log(res)
     
     }
 function game(){
    setButtonStatus()
+   persButtn.forEach((btn)=>{
+    btn.addEventListener('click',playRound)
+   }
+   )
 }
 game()
