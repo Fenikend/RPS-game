@@ -1,5 +1,6 @@
 const persButtn=document.querySelectorAll('.Pbuttons button')
 const persImage=document.querySelector('#user')
+const drawImage=document.querySelector('#draw')
 const botImage=document.querySelector('#bot')
 const emptyFigure=document.querySelector('#plhFrame')
 const endScreen=document.querySelector('#end-screen')
@@ -48,14 +49,22 @@ function setFigure(res=''){
     if (res ==='pRound'){
         persImage.classList.remove('hidden')
         botImage.classList.add('hidden')
+        drawImage.classList.add('hidden')
     }
     else if(res==='bRound'){
         botImage.classList.remove('hidden')
         persImage.classList.add('hidden')
+        drawImage.classList.add('hidden')
+    }
+    else if(res==='draw'){
+        drawImage.classList.remove('hidden')
+        persImage.classList.add('hidden')
+        botImage.classList.add('hidden')
     }
     else{
         botImage.classList.contains('hidden')?'':botImage.classList.add('hidden')
         persImage.classList.contains('hidden')?'':persImage.classList.add('hidden')
+        drawImage.classList.contains('hidden')?'':persImage.classList.add('hidden')
     }
     }
 
