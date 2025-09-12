@@ -109,9 +109,12 @@ function resetRound(cnd){
     persButtn.forEach((btn)=>{
         if (btn.classList.contains('active')){
             btn.classList.remove('active');
-        }
+        }})
+    botBtn.forEach((btn)=>{
+        if (btn.classList.contains('active-bot')){
+            btn.classList.remove('active-bot');
+        }})
         setFigure()
-    })
 }
 function resetGame(){
     gameScore=[0,0]
