@@ -115,6 +115,7 @@ function resetRound(cnd){
 }
 function resetGame(){
     gameScore=[0,0]
+    changeScore(gameScore)
     resetRound()
     endScreen.classList.add('hidden')
     endScreen.classList.remove('on-top')
